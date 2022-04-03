@@ -7,5 +7,5 @@ cp ./build/bin/geth /usr/local/bin/bsc
 
 mkdir -p /data/bsc-deploy
 cp ~/bsc-fast-deploy/config/*  /data/bsc-deploy/
-cp ~/bsc-fast-deploy/config/bas.service /usr/lib/systemd/system/
+cp ~/bsc-fast-deploy/config/bsc.service /usr/lib/systemd/system/
 systemctl daemon-reload
