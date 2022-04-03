@@ -1,3 +1,7 @@
+# 3. source
+source ~/.zshrc
+
+
 mkdir /data
 mkfs -t ext4 /dev/nvme1n1
 

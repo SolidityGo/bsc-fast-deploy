@@ -11,9 +11,6 @@ sed -i '1 a export PATH=$PATH:/usr/local/go/bin' ~/.zshrc
 sed -i "s/ZSH_THEME=.*/ZSH_THEME=\"bira\"/" ~/.zshrc
 sed -i "s/^plugins=(.*)$/plugins=( \n git z copypath copyfile copybuffer jsontools history \n zsh-autosuggestions \n zsh-syntax-highlighting \n zsh-history-substring-search \n)/" ~/.zshrc
 
-# 3. source
-source ~/.zshrc
-
 # parted data disk
 cgdisk /dev/nvme1n1
 
