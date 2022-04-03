@@ -6,7 +6,7 @@ function startChaind() {
     ip=`ifconfig eth0|grep inet|grep -v inet6 |awk '{ print $2 }'`
     workspace=/data/bsc-deploy
 #    sed -i -e "s?FileRoot = \"\"?FileRoot = \"/mnt/efs/data-seed/${ip}/\"?g" /data/data-seed/config.toml
-    mkdir -p /mnt/efs/data-seed/${ip}
+    mkdir -p /data/bsc-deploy/logs
 
     bsc --config ./config.toml --datadir /data/server/data-seed \
     --syncmode fast  --cache 4000 \
@@ -14,7 +14,7 @@ function startChaind() {
     --allow-insecure-no-tries \
     --rpc.gascap 70000000 --rpc.txfeecap 10  \
     --ws --ws.port 8546 --ws.api eth,net,web3,txpool \
-    >> /mnt/efs/data-seed/${ip}/bscnode.log 2>&1 &
+    >> /data/bsc-deploy/logs/bscnode.log 2>&1 &
 }
 
 function stopChaind() {
