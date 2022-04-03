@@ -8,6 +8,10 @@ function startChaind() {
 #    sed -i -e "s?FileRoot = \"\"?FileRoot = \"/mnt/efs/data-seed/${ip}/\"?g" /data/data-seed/config.toml
     mkdir -p /data/bsc-deploy/logs
 
+
+    # 1. consider --syncmode=full
+    # 2. consider --cache= 1/3 * all free memory
+    # 3. --allow-insecure-no-tries only for v1.1.7
     bsc --config ./config.toml --datadir /data/server/data-seed \
     --syncmode fast  --cache 4000 \
     --rpc.allow-unprotected-txs \
