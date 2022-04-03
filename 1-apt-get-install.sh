@@ -7,6 +7,8 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
 apt-get install nodejs -y
 npm install yarn pm2 -g
 
+wget https://go.dev/dl/go1.18.linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
 
 # 2. set zsh to default and install oh-my-zsh
 chsh -s /usr/bin/zsh

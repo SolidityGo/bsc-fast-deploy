@@ -4,8 +4,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 
 # 1. install golang
-wget https://go.dev/dl/go1.18.linux-amd64.tar.gz
-rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
 sed -i '1 a export PATH=$PATH:/usr/local/go/bin' ~/.zshrc
 
 # 2. set bira theme
