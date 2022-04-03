@@ -13,7 +13,7 @@ function startChaind() {
     # 2. consider --cache= 1/3 * all free memory
     # 3. --allow-insecure-no-tries only for v1.1.7
     bsc --config ./config.toml --datadir /data/server/data-seed \
-    --syncmode fast  --cache 4000 \
+    --syncmode fast  --cache 8000 \
     --rpc.allow-unprotected-txs \
     --allow-insecure-no-tries \
     --rpc.gascap 70000000 --rpc.txfeecap 10  \
@@ -22,13 +22,13 @@ function startChaind() {
 }
 
 function stopChaind() {
-    pid=`ps -ef | grep /data/data-seed/bsc | grep -v grep | awk '{print $2}'`
+    pid=`ps -ef | grep /data/server/data-seed | grep -v grep | awk '{print $2}'`
     if [ -n "$pid" ]; then
         for((i=1;i<=4;i++));
         do
             kill $pid
             sleep 5
-            pid=`ps -ef | grep /data/data-seed/bsc | grep -v grep | awk '{print $2}'`
+            pid=`ps -ef | grep /data/server/data-seed | grep -v grep | awk '{print $2}'`
             if [ -z "$pid" ]; then
                 break
             elif [ $i -eq 4 ]; then
