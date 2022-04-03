@@ -1,6 +1,6 @@
 # 1. git, golang, gcc, zsh, oh-my-zsh, aria2
 apt-get update
-apt-get install -y git gcc zsh aria2 make
+apt-get install -y git gcc zsh aria2 make ifconfig
 
 
 # 3. install nodejs
