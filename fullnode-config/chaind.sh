@@ -13,7 +13,7 @@ function startChaind() {
     # 2. consider --cache= 1/3 * all free memory
     # 3. --allow-insecure-no-tries only for v1.1.7
     bsc --config ./config.toml --datadir /data/server1/data-seed \
-    --syncmode fast  --cache 8000 \
+    --syncmode full  --cache 8000 \
     --rpc.allow-unprotected-txs \
     --rpc.gascap 60000000 --rpc.txfeecap 10  \
     --ws --ws.port 8546 --ws.api eth,net,web3,txpool \
