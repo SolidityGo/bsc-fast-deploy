@@ -1,6 +1,6 @@
 # 1. git, golang, gcc, zsh, oh-my-zsh, aria2
 yum update
-yum install -y git gcc zsh aria2 make net-tools
+yum install -y git gcc zsh aria2 make net-tools util-linux-user
 
 
 # 3. install nodejs
