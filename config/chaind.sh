@@ -3,7 +3,7 @@
 export GOGC=200
 
 function startChaind() {
-    ip=`ifconfig eth0|grep inet|grep -v inet6 |awk '{ print $2 }'`
+#    ip=`ifconfig eth0|grep inet|grep -v inet6 |awk '{ print $2 }'`
     workspace=/data/bsc-deploy
 #    sed -i -e "s?FileRoot = \"\"?FileRoot = \"/mnt/efs/data-seed/${ip}/\"?g" /data/data-seed/config.toml
     mkdir -p /data/bsc-deploy/logs
