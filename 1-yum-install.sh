@@ -1,6 +1,6 @@
 # 1. git, golang, gcc, zsh, oh-my-zsh, aria2
 yum update
-yum install -y git gcc zsh  make net-tools util-linux-user
+yum install -y git gcc zsh  make net-tools util-linux-user tmux
 rpm -ivh http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install -y aria2
 
