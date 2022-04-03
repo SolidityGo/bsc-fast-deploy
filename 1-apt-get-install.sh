@@ -1,7 +1,6 @@
 # 1. git, golang, gcc, zsh, oh-my-zsh, aria2
 apt-get update
-apt-get install -y git gcc zsh aria2 make net-tools
-
+apt-get install -y git gcc zsh aria2 make net-tools  util-linux-user
 
 # 3. install nodejs
 curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
