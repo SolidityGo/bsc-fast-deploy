@@ -5,7 +5,7 @@ rpm -ivh http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install -y aria2
 
 # 3. install nodejs
-curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
 yum install nodejs -y
 npm install yarn pm2 -g
 
