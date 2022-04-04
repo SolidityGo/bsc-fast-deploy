@@ -22,13 +22,13 @@ function startChaind() {
 }
 
 function stopChaind() {
-    pid=`ps -ef | grep /data/server/data-seed | grep -v grep | awk '{print $2}'`
+    pid=`ps -ef | grep /data/bsc-deploy/node | grep -v grep | awk '{print $2}'`
     if [ -n "$pid" ]; then
         for((i=1;i<=4;i++));
         do
             kill $pid
             sleep 5
-            pid=`ps -ef | grep /data/server/data-seed | grep -v grep | awk '{print $2}'`
+            pid=`ps -ef | grep /data/bsc-deploy/node | grep -v grep | awk '{print $2}'`
             if [ -z "$pid" ]; then
                 break
             elif [ $i -eq 4 ]; then
