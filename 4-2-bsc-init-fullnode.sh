@@ -29,8 +29,8 @@ echo "init finished, start backup $WORKSPACE"
 mv $WORKSPACE/node/geth/chaindata $WORKSPACE/node/geth/chaindata.bak
 mv $WORKSPACE/node/geth/triecache $WORKSPACE/node/geth/triecache.bak
 echo "backup $WORKSPACE finished, start mv snapshot"
-mv  $Fullnode_PATH/geth/chaindata $WORKSPACE/node/geth/
-mv  $Fullnode_PATH/geth/triecache $WORKSPACE/node/geth/
+mv -i $Fullnode_PATH/geth/chaindata $WORKSPACE/node/geth/chaindata
+mv -i $Fullnode_PATH/geth/triecache $WORKSPACE/node/geth/triecache
 echo "Completed mv snapshot !"
 
 
