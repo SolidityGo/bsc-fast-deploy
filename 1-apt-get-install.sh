@@ -1,6 +1,6 @@
 # 1. git, golang, gcc, zsh, oh-my-zsh, aria2
 apt-get update
-apt-get install -y git gcc zsh aria2 make net-tools tmux
+apt-get install -y git gcc g++ zsh aria2 make net-tools tmux
 apt-get -y install liblz4-tool
 
 # 3. install nodejs
