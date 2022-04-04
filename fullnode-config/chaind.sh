@@ -31,7 +31,7 @@ function stopChaind() {
             if [ -z "$pid" ]; then
                 break
             elif [ $i -eq 4 ]; then
-                kill -9 $kid
+                kill -9 $pid
             fi
         done
     fi
