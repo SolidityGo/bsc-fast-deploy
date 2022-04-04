@@ -15,7 +15,7 @@ function startChaind() {
     bsc --config /data/bsc-deploy/config.toml --datadir /data/bsc-deploy/node \
     --syncmode full  --cache 8000 \
     --rpc.allow-unprotected-txs \
-    --rpc.gascap 60000000 --rpc.txfeecap 10  \
+    --rpc.gascap 30000000 --rpc.txfeecap 2  \
     --ws --ws.port 8546 --ws.api eth,net,web3,txpool \
     >> /data/bsc-deploy/logs/bscnode.log 2>&1 &
 }
