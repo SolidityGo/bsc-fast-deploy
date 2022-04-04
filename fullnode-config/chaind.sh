@@ -12,7 +12,7 @@ function startChaind() {
     # 1. consider --syncmode=full
     # 2. consider --cache= 1/3 * all free memory
     # 3. --allow-insecure-no-tries only for v1.1.7
-    bsc --config /data/bsc-deploy/config.toml --datadir /data/server/data-seed \
+    bsc --config /data/bsc-deploy/config.toml --datadir /data/bsc-deploy/node \
     --syncmode full  --cache 8000 \
     --rpc.allow-unprotected-txs \
     --rpc.gascap 60000000 --rpc.txfeecap 10  \
