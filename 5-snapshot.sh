@@ -15,9 +15,9 @@ https://tf-dex-prod-public-snapshot-site3.s3-accelerate.amazonaws.com/geth-20220
 echo "init node"
 bsc --datadir $WORKSPACE/node init $WORKSPACE/genesis.json
 echo "init finished, start backup $WORKSPACE"
-mv $WORKSPACE/node/geth/chaindata $WORKSPACE/node/geth/chaindata.bak
+mv $WORKSPACE/node/geth/chaindata $WORKSPACE/chaindata.bak
 echo "backup $WORKSPACE finished, start mv snapshot"
-mv  $Fastnode_PATH/geth/chaindata $WORKSPACE/node/geth/chaindata
+mv  $Fastnode_PATH/geth/chaindata $WORKSPACE/node/geth/
 mv  $Fastnode_PATH/geth/triecache $WORKSPACE/node/geth/triecache
 echo "Completed mv snapshot !"
 

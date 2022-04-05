@@ -26,10 +26,4 @@ mkdir -p $WORKSPACE/node
 echo "init node"
 bsc --datadir $WORKSPACE/node init $WORKSPACE/genesis.json
 echo "init finished, start backup $WORKSPACE"
-mv $WORKSPACE/node/geth/chaindata $WORKSPACE/node/geth/chaindata.bak
-mv $WORKSPACE/node/geth/triecache $WORKSPACE/node/geth/triecache.bak
-echo "backup $WORKSPACE finished, start mv snapshot"
-mv  $Fastnode_PATH/geth/chaindata $WORKSPACE/node/geth/chaindata
-mv  $Fastnode_PATH/geth/triecache $WORKSPACE/node/geth/triecache
-echo "Completed mv snapshot !"
 
