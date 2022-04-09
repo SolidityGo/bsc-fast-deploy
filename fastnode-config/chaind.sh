@@ -16,10 +16,11 @@ function startChaind() {
     --syncmode fast  --cache 12000 \
     --rpc.allow-unprotected-txs \
     --allow-insecure-no-tries \
-    --rpc.gascap 20000000 --rpc.txfeecap 2  \
+    --rpc.gascap 50000000 --rpc.txfeecap 4  \
     --ws --ws.port 8546 --ws.api eth,net,web3,txpool \
     >> /data/bsc-deploy/logs/bscnode.log 2>&1 &
 }
+#bsc --config /data/bsc-deploy/config.toml --datadir /data/bsc-deploy/node --syncmode fast  --cache 8000 --rpc.allow-unprotected-txs --allow-insecure-no-tries --rpc.gascap 70000000 --rpc.txfeecap 10 --ws --ws.addr 0.0.0.0  --ws.port 8546 --ws.api eth,net,web3,txpool --ws.origins '*' --http --http.addr 0.0.0.0 --http.port 8545 --http.api net,web3,eth --http.corsdomain '*' --http.vhosts '*'
 
 function stopChaind() {
     pid=`ps -ef | grep /data/bsc-deploy/node | grep -v grep | awk '{print $2}'`
