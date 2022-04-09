@@ -1,6 +1,4 @@
 
-tmux new -s bsc
-
 WORKSPACE=/data/bsc-deploy
 Fastnode_PATH=/data/server/data-seed
 
