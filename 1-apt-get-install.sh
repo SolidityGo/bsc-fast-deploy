@@ -9,10 +9,10 @@ apt-get install nodejs -y
 npm install yarn pm2 -g
 
 # Caution: if amd64 use this
- wget https://go.dev/dl/go1.18.linux-amd64.tar.gz
- rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
-#wget https://go.dev/dl/go1.18.linux-arm64.tar.gz
-#rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.linux-arm64.tar.gz
+# wget https://go.dev/dl/go1.18.linux-amd64.tar.gz
+# rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.18.linux-arm64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.linux-arm64.tar.gz
 
 
 # 2. set zsh to default and install oh-my-zsh
